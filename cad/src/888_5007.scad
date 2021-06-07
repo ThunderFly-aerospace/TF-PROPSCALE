@@ -1,9 +1,9 @@
 include <../parameters.scad>
 use <./lib/ALU_profile_holder_side.scad>
 use <./lib/ALU_profile.scad>
+use <./lib/rotor_joint.scad>
 use <./888_5002.scad>
 use <./888_5005.scad>
-use <./888_5011.scad>
 
 
 module 888_5007_attachment_points() {
@@ -106,72 +106,12 @@ module 888_5007(print_plate=false) {
             rotate([0, -90, 0])
             translate([-strain_gauge_length/2, -strain_gauge_width/2-2, 0])
             cube([strain_gauge_length, strain_gauge_width+4, strain_gauge_width+2]);
-            
-            
-            
-            // angle adjustment screws holes
-            adjustment_screw_holes_width = 34;
-            adjustment_screw_holes_offset = ALU_profile_width/2-ALU_profile_holder_wall_thickness;
-            
-            translate([-adjustment_screw_holes_offset, adjustment_screw_holes_width/2, tower_height+18])
-            union() {
-                translate([0, 0, -ALU_profile_width/2])
-                cylinder(h=ALU_profile_width, d=M5_screw_diameter, $fn=50);
-                
-                translate([-ALU_profile_holder_wall_thickness*6, -M5_nut_pocket/2, 0])
-                cube([ALU_profile_holder_wall_thickness*6, M5_nut_pocket, M5_nut_height]);
-                
-                cylinder(h=M5_nut_height, d=M5_nut_diameter, $fn=6);
-            }
-            
-            translate([-adjustment_screw_holes_offset, -adjustment_screw_holes_width/2, tower_height+18])
-            union() {
-                translate([0, 0, -ALU_profile_width/2])
-                cylinder(h=ALU_profile_width, d=M5_screw_diameter, $fn=50);
-                
-                translate([-ALU_profile_holder_wall_thickness*6, -M5_nut_pocket/2, 0])
-                cube([ALU_profile_holder_wall_thickness*6, M5_nut_pocket, M5_nut_height]);
-                
-                cylinder(h=M5_nut_height, d=M5_nut_diameter, $fn=6);
-            }
-            
-            // angle adjustment hole for screw
-            translate([0, 0, tower_height+20])
-            rotate([0, 90, 0])
-            hull() {
-                translate([0, 0, -ALU_profile_width*2])
-                cylinder(h=ALU_profile_width*4, d=M6_nut_diameter+5, $fn=50);
-                
-                translate([-ALU_profile_width, 0, -ALU_profile_width*2])
-                cylinder(h=ALU_profile_width*4, d=M6_nut_diameter+5, $fn=50);
-            }
         }
         
         // main rotor attachment point
         translate([(608_bearing_outer_diameter+10+ALU_profile_width)/2+ALU_profile_holder_wall_thickness+15, 26/2, tower_height-12])
-        rotate([0, 90, -90])
-        union() {
-            difference() {
-                hull() {
-                    translate([-608_bearing_outer_diameter/2-10/2, -(608_bearing_outer_diameter+10)/2-15, 0])
-                    cube([608_bearing_outer_diameter+10, 3, 26]);
-                    cylinder(h=26, d=608_bearing_outer_diameter+10, $fn=100);
-                }
-                translate([0, 0, -5])
-                cylinder(h=26+10, d=M6_screw_diameter+10, $fn=100);
-                
-                translate([0, 0, -.01])
-                cylinder(h=608_bearing_thickness, d=608_bearing_outer_diameter, $fn=100);
-                
-                translate([0, 0, 26-608_bearing_thickness+.01])
-                cylinder(h=608_bearing_thickness, d=608_bearing_outer_diameter, $fn=100);
-            }
-        
-            if(!print_plate) {
-                translate([0, 0, 608_bearing_thickness])
-                888_5011();
-            }
-        }
+        rotate([0, 90, 0])
+        rotor_joint(1, 12);
     }   
 }
 

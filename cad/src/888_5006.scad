@@ -96,6 +96,7 @@ module 888_5006(side=1) {
         rotate([90, 0, -90-90*side])
         union() {
             cylinder(d=M8_screw_diameter, h=50, $fn=100);
+            translate([0, 0, -50])
             cylinder(d=M6_screw_diameter, h=ALU_profile_width*4, $fn=100);
             
             translate([0, 0, 50+2])
