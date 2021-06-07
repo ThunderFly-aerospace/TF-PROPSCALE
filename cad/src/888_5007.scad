@@ -109,9 +109,13 @@ module 888_5007(print_plate=false) {
         }
         
         // main rotor attachment point
-        translate([(608_bearing_outer_diameter+10+ALU_profile_width)/2+ALU_profile_holder_wall_thickness+15, 26/2, tower_height-12])
+        translate([(608_bearing_outer_diameter+10+ALU_profile_width)/2+ALU_profile_holder_wall_thickness, 0, tower_height+25])
         rotate([0, 90, 0])
-        rotor_joint(1, 12);
+        union() {
+            rotor_joint(1, 10);
+            translate([0, 0, -10])
+            rotor_joint(2, 10);
+        }
     }   
 }
 
