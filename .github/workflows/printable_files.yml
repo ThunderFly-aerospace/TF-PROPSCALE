@@ -58,7 +58,7 @@ jobs:
     - name: Upload gcodes
       uses:  MLAB-project/push-generated-file@master
       with:
-        source_file_path: 'CAD/gcode'
+        source_file_path: 'cad/gcode'
         destination_folder: 'gcode'
         destination_repo: 'ThunderFly-aerospace/gcodes'
         target_branch:  ${{env.CI_REPOSITORY}}/${{env.CI_REF_NAME}}/${{matrix.printer}}
