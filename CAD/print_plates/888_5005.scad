@@ -1,4 +1,4 @@
-//@set_slicing_config(../../slicing/default.ini)
+//@set_slicing_config(../slicing/3dprinter_configs/default.ini)
 
 include <../src/888_5005.scad>
 
