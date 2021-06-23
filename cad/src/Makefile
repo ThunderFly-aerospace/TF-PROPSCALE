@@ -1,7 +1,7 @@
 STL_DIR=../stl
 AMF_DIR=../amf
 IMG_DIR=../img
-SRC_DIR=../src
+SRC_DIR=../print_plates
 # DEP_DIR=../../dep
 # GCD_DIR=../../gcode
 # INI_DIR=../../slicing
