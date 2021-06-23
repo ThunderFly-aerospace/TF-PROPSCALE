@@ -1,3 +1,3 @@
-[submodule "CAD/slicing/3Dprinter_configs"]
-	path = CAD/slicing/3Dprinter_configs
+[submodule "CAD/slicing/3dprinter_configs"]
+	path = CAD/slicing/3dprinter_configs
 	url = git@github.com:ThunderFly-aerospace/3dprinter_configs.git
