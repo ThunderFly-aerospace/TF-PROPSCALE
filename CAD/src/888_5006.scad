@@ -104,6 +104,6 @@ module 888_5006(side=1) {
     }   
 }
 
-888_5006(side=1);
-888_5006(side=-1);
-#888_5006_attachment_points();
+//888_5006(side=1);
+//888_5006(side=-1);
+//#888_5006_attachment_points();
