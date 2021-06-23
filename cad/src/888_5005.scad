@@ -67,4 +67,4 @@ module 888_5005_bearing_half(print_plate=false) {
     }
 }
 
-888_5005(true);
+//888_5005(true);
