@@ -7,6 +7,7 @@ use <./src/888_5003.scad>
 use <./src/888_5005.scad>
 use <./src/888_5006.scad>
 use <./src/888_5007.scad>
+use <./src/888_5008.scad>
 use <./src/888_5010.scad>
 use <./src/888_5011.scad>
 use <./src/888_5012.scad>
@@ -81,13 +82,24 @@ rotate([0, 0, 0])
 color([0, 1, 1])
 #cube([electro_box_length, electro_box_width, electro_box_height]);
 
-// tower hinges attachment points
-translate([ALU_profile_width*.75, -base_width/2+ALU_profile_width+ALU_profile_holder_wall_thickness*2, 0-ALU_profile_holder_wall_thickness])
+// front tower hinges attachment points
+translate([ALU_profile_width*.75+front_tower_offset, -base_width/2+ALU_profile_width+ALU_profile_holder_wall_thickness*2, 0-ALU_profile_holder_wall_thickness])
 rotate([0, -90 ,0])
 color([0, 1, 1])
 888_5005();
     
-translate([-ALU_profile_width*.75, base_width/2-ALU_profile_width-ALU_profile_holder_wall_thickness*2, 0-ALU_profile_holder_wall_thickness])
+translate([-ALU_profile_width*.75+front_tower_offset, base_width/2-ALU_profile_width-ALU_profile_holder_wall_thickness*2, 0-ALU_profile_holder_wall_thickness])
+rotate([0, -90, 180])
+color([0, 1, 1])
+888_5005();
+
+// back tower hinges attachment points
+translate([ALU_profile_width*.75-back_tower_offset, -base_width/2+ALU_profile_width+ALU_profile_holder_wall_thickness*2, 0-ALU_profile_holder_wall_thickness])
+rotate([0, -90 ,0])
+color([0, 1, 1])
+888_5005();
+    
+translate([-ALU_profile_width*.75-back_tower_offset, base_width/2-ALU_profile_width-ALU_profile_holder_wall_thickness*2, 0-ALU_profile_holder_wall_thickness])
 rotate([0, -90, 180])
 color([0, 1, 1])
 888_5005();
@@ -102,38 +114,70 @@ color([0, 1, 1])
 888_5003();
 
 
-// tower ///////////////////////////////////////////////////////////////////
-translate([0, base_width/2-ALU_profile_width, ALU_profile_width+0+35])
+// front tower ///////////////////////////////////////////////////////////////////
+translate([front_tower_offset, base_width/2-ALU_profile_width, ALU_profile_width+0+35])
 rotate([tower_angle, 0 ,0])
 translate([0, ALU_profile_width/2 ,0])
 ALU_profile(height=tower_arm_length);
 
-translate([0, -base_width/2+ALU_profile_width, ALU_profile_width+0+35])
+translate([front_tower_offset, -base_width/2+ALU_profile_width, ALU_profile_width+0+35])
 rotate([-tower_angle, 0 ,0])
 translate([0, -ALU_profile_width/2 ,0])
 ALU_profile(height=tower_arm_length);
 
 // tower hinges
-translate([0, 0, ALU_profile_width+0])
+translate([front_tower_offset, 0, ALU_profile_width+0])
 color([0, 1, 1])
 888_5006(side=-1);
     
-translate([0, 0, ALU_profile_width+0])
+translate([front_tower_offset, 0, ALU_profile_width+0])
 color([0, 1, 1])
 888_5006(side=1);
 
 // rotor joint mekanism    
-translate([0, 0, ALU_profile_width+0+35])
+translate([front_tower_offset, 0, ALU_profile_width+0+35])
 rotate([0, 0, 0])
 color([0, 1, 1])
 888_5007();
 
+
+// back tower ///////////////////////////////////////////////////////////////////
+translate([-back_tower_offset, base_width/2-ALU_profile_width, ALU_profile_width+0+35])
+rotate([tower_angle, 0 ,0])
+translate([0, ALU_profile_width/2 ,0])
+ALU_profile(height=tower_arm_length);
+
+translate([-back_tower_offset, -base_width/2+ALU_profile_width, ALU_profile_width+0+35])
+rotate([-tower_angle, 0 ,0])
+translate([0, -ALU_profile_width/2 ,0])
+ALU_profile(height=tower_arm_length);
+
+// tower hinges
+translate([-back_tower_offset, 0, ALU_profile_width+0])
+color([0, 1, 1])
+888_5006(side=-1);
+    
+translate([-back_tower_offset, 0, ALU_profile_width+0])
+color([0, 1, 1])
+888_5006(side=1);
+
+// rotor joint mekanism    
+translate([-back_tower_offset, 0, ALU_profile_width+0+35])
+rotate([0, 0, 0])
+color([0, 1, 1])
+888_5008();
+
 // drag strain gauge attachment point
-translate([-ALU_profile_width/2-ALU_profile_holder_wall_thickness*2+strain_gauge_width+4, 0, tower_height-strain_gauge_length/2-tower_drag_z_offset/2+2+0+ALU_profile_width*2+ALU_profile_holder_wall_thickness*2])
+translate([-ALU_profile_width/2-ALU_profile_holder_wall_thickness*2+strain_gauge_width+4-back_tower_offset, 0, tower_height-strain_gauge_length/2-tower_drag_z_offset/2+2+0+ALU_profile_width*2+ALU_profile_holder_wall_thickness*2])
 rotate([0, 90, 180])
 tenzometer(mounting_part=false);
 
-// calibration device
+// tower bridge ////////////////////////////////////////////////////////////////////
+translate([(front_tower_offset-back_tower_offset)/2-35, 0, tower_height+ALU_profile_width+608_bearing_outer_diameter])
+rotate([0, 90, 0])
+ALU_profile(height=70);
+
+// calibration device //////////////////////////////////////////////////////////////
 translate([-base_length/2, -ALU_profile_width/2, 0+tower_height+20])
 rotate([0, 0, 180])
 color([1, 1, 0])

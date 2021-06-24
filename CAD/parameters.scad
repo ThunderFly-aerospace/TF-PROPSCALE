@@ -186,6 +186,8 @@ g3_0_srcew_dist = 55;
 // scale parameters
 base_length = 500;
 base_width = 500;
+front_tower_offset = 220;
+back_tower_offset = 0;
 tower_height = 375;
 tower_angle = atan((base_width/2-ALU_profile_width-10)/tower_height);
 tower_arm_length = tower_height/cos(tower_angle);
