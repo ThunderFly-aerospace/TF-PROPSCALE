@@ -6,7 +6,7 @@ SRC_DIR=../print_plates
 # GCD_DIR=../../gcode
 # INI_DIR=../../slicing
 GIT_ROOT=../../
-OUTPUT_FOLDER=cad
+OUTPUT_FOLDER=CAD
 NAME_PREFIX=TF-MOTORSCALE
 PROCESSOR3D_PARAM=--force --no_stl
 
