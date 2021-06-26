@@ -108,7 +108,7 @@ module 888_5008(print_plate=false) {
             cube([strain_gauge_length, strain_gauge_width+4, strain_gauge_width+2]);
         }
         
-        // main rotor attachment point
+        // tower bridge attachment point
         translate([(608_bearing_outer_diameter+10+ALU_profile_width)/2+ALU_profile_holder_wall_thickness+15, 26/2, tower_height-12])
         rotate([0, 90, -90])
         union() {

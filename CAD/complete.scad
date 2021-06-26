@@ -8,6 +8,7 @@ use <./src/888_5005.scad>
 use <./src/888_5006.scad>
 use <./src/888_5007.scad>
 use <./src/888_5008.scad>
+use <./src/888_5009.scad>
 use <./src/888_5010.scad>
 use <./src/888_5011.scad>
 use <./src/888_5012.scad>
@@ -139,6 +140,12 @@ translate([front_tower_offset, 0, ALU_profile_width+0+35])
 rotate([0, 0, 0])
 color([0, 1, 1])
 888_5007();
+
+// rotor joint mekanism    
+translate([front_tower_offset, 0, ALU_profile_width+0+35])
+rotate([0, 0, 0])
+color([0, 1, 1])
+888_5009();
 
 
 // back tower ///////////////////////////////////////////////////////////////////
