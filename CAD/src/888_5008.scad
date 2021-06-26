@@ -136,5 +136,5 @@ module 888_5008(print_plate=false) {
     }   
 }
 
-//888_5008();
-//#888_5008_attachment_points();
+888_5008();
+#888_5008_attachment_points();
