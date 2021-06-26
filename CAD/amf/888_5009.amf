@@ -4345,8 +4345,8 @@
      <z>0</z>
     </coordinates></vertex>
     <vertex><coordinates>
-     <x>-17.6862</x>
-     <y>34.0122</y>
+     <x>-16.8728</x>
+     <y>34.0578</y>
      <z>0</z>
     </coordinates></vertex>
     <vertex><coordinates>
@@ -4355,8 +4355,8 @@
      <z>0</z>
     </coordinates></vertex>
     <vertex><coordinates>
-     <x>-16.8728</x>
-     <y>34.0578</y>
+     <x>-17.6862</x>
+     <y>34.0122</y>
      <z>0</z>
     </coordinates></vertex>
     <vertex><coordinates>
@@ -12298,16 +12298,6 @@
     </triangle>
     <triangle>
      <v1>868</v1>
-     <v2>511</v2>
-     <v3>869</v3>
-    </triangle>
-    <triangle>
-     <v1>869</v1>
-     <v2>511</v2>
-     <v3>468</v3>
-    </triangle>
-    <triangle>
-     <v1>870</v1>
      <v2>869</v2>
      <v3>467</v3>
     </triangle>
@@ -12317,13 +12307,23 @@
      <v3>468</v3>
     </triangle>
     <triangle>
+     <v1>870</v1>
+     <v2>511</v2>
+     <v3>869</v3>
+    </triangle>
+    <triangle>
+     <v1>869</v1>
+     <v2>511</v2>
+     <v3>468</v3>
+    </triangle>
+    <triangle>
      <v1>871</v1>
-     <v2>870</v2>
+     <v2>868</v2>
      <v3>501</v3>
     </triangle>
     <triangle>
      <v1>501</v1>
-     <v2>870</v2>
+     <v2>868</v2>
      <v3>467</v3>
     </triangle>
     <triangle>
@@ -12789,10 +12789,10 @@
     <triangle>
      <v1>917</v1>
      <v2>510</v2>
-     <v3>868</v3>
+     <v3>870</v3>
     </triangle>
     <triangle>
-     <v1>868</v1>
+     <v1>870</v1>
      <v2>510</v2>
      <v3>511</v3>
     </triangle>
@@ -15599,21 +15599,21 @@
     <triangle>
      <v1>717</v1>
      <v2>713</v2>
-     <v3>868</v3>
-    </triangle>
-    <triangle>
-     <v1>717</v1>
-     <v2>868</v2>
-     <v3>869</v3>
-    </triangle>
-    <triangle>
-     <v1>717</v1>
-     <v2>869</v2>
      <v3>870</v3>
     </triangle>
     <triangle>
      <v1>717</v1>
      <v2>870</v2>
+     <v3>869</v3>
+    </triangle>
+    <triangle>
+     <v1>717</v1>
+     <v2>869</v2>
+     <v3>868</v3>
+    </triangle>
+    <triangle>
+     <v1>717</v1>
+     <v2>868</v2>
      <v3>871</v3>
     </triangle>
     <triangle>
@@ -15847,7 +15847,7 @@
      <v3>916</v3>
     </triangle>
     <triangle>
-     <v1>868</v1>
+     <v1>870</v1>
      <v2>713</v2>
      <v3>917</v3>
     </triangle>
