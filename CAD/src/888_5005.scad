@@ -20,7 +20,7 @@ module 888_5005(print_plate=false) {
         union() {
             cylinder(h=ALU_profile_width, d=M6_screw_diameter, $fn=20);
             translate([0, 0, 0])
-            cylinder(h=ALU_profile_holder_wall_thickness, d=M6_head_diameter, $fn=20);
+            cylinder(h=ALU_profile_holder_wall_thickness, d=15, $fn=20);
         }
             
         translate([ALU_profile_width/2+ALU_profile_holder_wall_thickness, .1, 7])
@@ -28,7 +28,7 @@ module 888_5005(print_plate=false) {
         union() {
             cylinder(h=ALU_profile_width, d=M6_screw_diameter, $fn=20);
             translate([0, 0, 0])
-            cylinder(h=ALU_profile_holder_wall_thickness, d=M6_head_diameter, $fn=20);
+            cylinder(h=ALU_profile_holder_wall_thickness, d=15, $fn=20);
         }
         
         translate([-ALU_profile_width*2+5, -ALU_profile_width*2, -1])
