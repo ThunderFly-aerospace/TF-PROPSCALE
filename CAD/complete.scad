@@ -9,6 +9,8 @@ use <./src/888_5007.scad>
 use <./src/888_5008.scad>
 use <./src/888_5009.scad>
 use <./src/888_5010.scad>
+use <./src/888_5011.scad>
+use <./src/888_5012.scad>
 use <./src/888_5013.scad>
 use <./src/888_5014.scad>
 use <./src/888_1001.scad>
@@ -180,6 +182,15 @@ tenzometer(mounting_part=false);
 translate([(front_tower_offset-back_tower_offset)/2-35, 0, tower_height+ALU_profile_width+608_bearing_outer_diameter])
 rotate([0, 90, 0])
 ALU_profile(height=70);
+
+translate([(front_tower_offset-back_tower_offset)/2, 0, tower_height+54])
+color([0, 1, 1])
+888_5012();
+
+translate([(front_tower_offset-back_tower_offset)/2, 0, tower_height+54])
+rotate([0, 0, 180])
+color([0, 1, 1])
+888_5012();
 
 // calibration device //////////////////////////////////////////////////////////////
 translate([-base_length/2, -ALU_profile_width/2, 0+tower_height+20])
