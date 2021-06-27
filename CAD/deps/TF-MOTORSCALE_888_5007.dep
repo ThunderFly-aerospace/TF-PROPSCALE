@@ -5,7 +5,6 @@
 	../src/888_5007.scad \
 	../src/888_5009.scad \
 	../src/888_5010.scad \
-	../src/888_5011.scad \
 	../src/lib/ALU_profile.scad \
 	../src/lib/ALU_profile_holder_side.scad \
 	../src/lib/rotor_joint.scad \
