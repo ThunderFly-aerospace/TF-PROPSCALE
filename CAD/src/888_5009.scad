@@ -40,13 +40,23 @@ module 888_5009(print_plate=false) {
             // top screw
             translate([-ALU_profile_width/2-ALU_profile_holder_wall_thickness*3, 0, tower_height+15])
             rotate([0, 90, 0])
-            cylinder(h = ALU_profile_holder_wall_thickness*4, d=M6_screw_diameter, $fn=50);
+            union() {
+                cylinder(h = ALU_profile_holder_wall_thickness*4, d=M6_screw_diameter, $fn=50);
+                
+                translate([0, 0, 2.99])
+                cylinder(h = 4, d=15, $fn=50);
+            }
             
             
             // bottom screw
             translate([-ALU_profile_width/2-ALU_profile_holder_wall_thickness*3, 0, tower_height-35])
             rotate([0, 90, 0])
-            cylinder(h = ALU_profile_holder_wall_thickness*4, d=M6_screw_diameter, $fn=50);
+            union() {
+                cylinder(h = ALU_profile_holder_wall_thickness*4, d=M6_screw_diameter, $fn=50);
+                
+                translate([0, 0, 2.99])
+                cylinder(h = 4, d=15, $fn=50);
+            }
             
             
             // profile screws
@@ -54,13 +64,23 @@ module 888_5009(print_plate=false) {
             rotate([tower_angle, 0, 0])
             translate([-ALU_profile_width/2-ALU_profile_holder_wall_thickness*3, 0, -20])
             rotate([0, 90, 0])
-            cylinder(h = ALU_profile_holder_wall_thickness*4, d=M6_screw_diameter, $fn=50);
+            union() {
+                cylinder(h = ALU_profile_holder_wall_thickness*4, d=M6_screw_diameter, $fn=50);
+                
+                translate([0, 0, 2.99])
+                cylinder(h = 4, d=15, $fn=50);
+            }
             
             translate([0, -ALU_profile_width+ALU_profile_holder_wall_thickness, tower_height])
             rotate([-tower_angle, 0, 0])
             translate([-ALU_profile_width/2-ALU_profile_holder_wall_thickness*3, 0, -20])
             rotate([0, 90, 0])
-            cylinder(h = ALU_profile_holder_wall_thickness*4, d=M6_screw_diameter, $fn=50);
+            union() {
+                cylinder(h = ALU_profile_holder_wall_thickness*4, d=M6_screw_diameter, $fn=50);
+                
+                translate([0, 0, 2.99])
+                cylinder(h = 4, d=15, $fn=50);
+            }
         }
         
         // tower bridge attachment point
