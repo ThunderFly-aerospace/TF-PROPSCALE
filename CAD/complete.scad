@@ -108,10 +108,10 @@ color([0, 1, 1])
 translate([-base_length/2-ALU_profile_width/2, 0, ALU_profile_width])
 ALU_profile(height=0+tower_height+20);
 
-translate([-base_length/2+ALU_profile_holder_wall_thickness*2, -ALU_profile_width/2-ALU_profile_holder_wall_thickness, tower_height-strain_gauge_length/2-tower_drag_z_offset/2+2+0+ALU_profile_width*2+ALU_profile_holder_wall_thickness*2-strain_gauge_length/2+(strain_gauge_screw_distance*1.75)/2+ALU_profile_width/2])
+translate([-base_length/2+ALU_profile_holder_wall_thickness*2, -ALU_profile_width/2-ALU_profile_holder_wall_thickness, tower_height-strain_gauge_length/2-tower_drag_z_offset/2+2+0+ALU_profile_width*2+ALU_profile_holder_wall_thickness*2-strain_gauge_length/2+(strain_gauge_screw_distance*1.75)/2+M5_screw_diameter*2.5/2])
 rotate([180, 0, 90])
 color([0, 1, 1])
-888_5003();
+888_5003_A();
 
 
 // front tower ///////////////////////////////////////////////////////////////////

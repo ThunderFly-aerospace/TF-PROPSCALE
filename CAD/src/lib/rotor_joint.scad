@@ -45,7 +45,7 @@ module rotor_joint_plate(thickness=10) {
     }
 }
 
-module rotor_joint_holes(mode, thickness=10) {
+module rotor_joint_holes(mode, thickness=10, hole_head_height=30) {
     if(mode == 1) {
         for(i = [0:90:360]) {
             rotate([0, 0, i])
@@ -59,8 +59,8 @@ module rotor_joint_holes(mode, thickness=10) {
             union() {
                 cylinder(d=M4_screw_diameter, h=thickness+0.1, $fn=20, center=true);
                 
-                translate([0, 0, thickness*2+.01])
-                cylinder(d=M4_nut_diameter*2+1, h=30, $fn=100, center=true);
+                translate([0, 0, thickness*2+.01+(hole_head_height-30)/2])
+                cylinder(d=M4_nut_diameter*2+1, h=hole_head_height, $fn=100, center=true);
             }
         }
     }

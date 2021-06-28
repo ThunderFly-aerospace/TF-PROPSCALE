@@ -1,7 +1,9 @@
 maximum_printable_size = 150;
 
-layer_thickness = 0.3;
-global_clearance = 0.5;
+layer_thickness = 0.2;
+base_patern = 10;
+global_clearance = 0.2;
+clearance = global_clearance;
 
 
 //Screw diameter and nut for M10 [mm]
@@ -199,3 +201,41 @@ electro_box_height = 51.5;
 // calibration device parameters
 calibration_arm_x_offset = 140;
 calibration_arm_y_offset = 50;
+
+
+
+
+
+// Engine and engine holder parameters
+
+motor_holder_height = base_patern * 5;
+motor_holder_thickness = 5;
+motor_holder_motor_height = 25;
+motor_holder_side_mount_height = base_patern*2.5;
+pylon_holder_side_mount_height = base_patern*4.5;
+
+engine_angle = -5; // ongle of engine axis relative to fuselage main axis
+engine_diameter = 55;
+engine_offset = 53;			// Posun motoru v ose X (dopredu)
+
+
+
+
+// Parametry pro hacek na kabely od motoru
+	motor_wire_holder_width = 5;
+	motor_wire_holder_height = 10;
+	motor_wire_holder_space = 3;
+	motor_wire_holder_thickness = 2.5;
+	motor_wire_holder_z_shift = 10;
+	motor_wire_holder_x_shift = 19;
+
+// Parametry pro ochranny ram nad motorem 
+	motor_protective_frame_x_shift = 20;
+	motor_protective_frame_z_base = 32;
+	motor_protective_frame_beam_width = 5;
+	motor_protective_frame_beam_thickness = 3;
+	motor_protective_frame_width = base_width-3;
+	motor_protective_frame_plug_thickness = 2;
+	motor_protective_frame_plug_length = 4;
+	motor_protective_frame_thickness = 5;
+	motor_protective_frame_z_scale = 0.75;
