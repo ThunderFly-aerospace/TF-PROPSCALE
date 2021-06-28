@@ -1,0 +1,4 @@
+Motor_Adapter.scad: \
+	../parameters.scad \
+	../src/Motor_Adapter.scad \
+	../src/lib/rotor_joint.scad \
