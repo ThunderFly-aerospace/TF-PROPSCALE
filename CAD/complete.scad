@@ -16,6 +16,7 @@ use <./src/888_5014.scad>
 use <./src/888_1001.scad>
 use <./src/888_1002.scad>
 use <./src/888_1003.scad>
+use <./src/Motor_Adapter.scad>
 
 side_pillars_offset = -ALU_profile_width/2;
 0_offset = (608_bearing_outer_diameter+10)/2-1;
@@ -104,7 +105,7 @@ rotate([0, -90, 180])
 color([0, 1, 1])
 888_5005();
 
-// front pillar //////////////////////////////////////////////////////
+// back pillar //////////////////////////////////////////////////////
 translate([-base_length/2-ALU_profile_width/2, 0, ALU_profile_width])
 ALU_profile(height=0+tower_height+20);
 
@@ -134,17 +135,23 @@ translate([front_tower_offset, 0, ALU_profile_width+0])
 color([0, 1, 1])
 888_5006(side=1);
 
-// rotor joint mekanism    
+// front tringle joint   
 translate([front_tower_offset, 0, ALU_profile_width+0+35])
 rotate([0, 0, 0])
 color([0, 1, 1])
 888_5007();
 
-// rotor joint mekanism    
+// back plate of front triangle joint  
 translate([front_tower_offset, 0, ALU_profile_width+0+35])
 rotate([0, 0, 0])
 color([0, 1, 1])
 888_5009();
+
+// motor adapter    
+translate([front_tower_offset+ALU_profile_width/2+ALU_profile_holder_wall_thickness*2+20-2, 0, tower_height+ALU_profile_width+35])
+rotate([90, 0, 90])
+color([0, 1, 1])
+Motor_Adapter();
 
 
 // back tower ///////////////////////////////////////////////////////////////////
@@ -167,7 +174,7 @@ translate([-back_tower_offset, 0, ALU_profile_width+0])
 color([0, 1, 1])
 888_5006(side=1);
 
-// rotor joint mekanism    
+// back tringle joint  
 translate([-back_tower_offset, 0, ALU_profile_width+0+35])
 rotate([0, 0, 0])
 color([0, 1, 1])
