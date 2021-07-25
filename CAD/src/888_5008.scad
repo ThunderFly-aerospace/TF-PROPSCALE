@@ -109,8 +109,8 @@ module 888_5008(print_plate=false) {
         }
         
         // tower bridge attachment point
-        translate([(608_bearing_outer_diameter+10+ALU_profile_width)/2+ALU_profile_holder_wall_thickness+15, 26/2, tower_height-12])
-        rotate([0, 90, -90])
+        translate([0, 26/2, tower_height+50])
+        rotate([90, 0, 0])
         union() {
             difference() {
                 hull() {

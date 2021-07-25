@@ -139,13 +139,14 @@ color([0, 1, 1])
 translate([front_tower_offset, 0, ALU_profile_width+0+35])
 rotate([0, 0, 0])
 color([0, 1, 1])
-888_5007();
+//888_5007();
+888_5008();
 
-// back plate of front triangle joint  
-translate([front_tower_offset, 0, ALU_profile_width+0+35])
-rotate([0, 0, 0])
-color([0, 1, 1])
-888_5009();
+//// back plate of front triangle joint  
+//translate([front_tower_offset, 0, ALU_profile_width+0+35])
+//rotate([0, 0, 0])
+//color([0, 1, 1])
+//888_5009();
 
 // motor adapter    
 translate([front_tower_offset+ALU_profile_width/2+ALU_profile_holder_wall_thickness*2+20-2, 0, tower_height+ALU_profile_width+35])
