@@ -109,13 +109,13 @@ module 888_5008(print_plate=false) {
         }
         
         // tower bridge attachment point
-        translate([0, 26/2, tower_height+50])
+        translate([(608_bearing_outer_diameter+10-ALU_profile_width-ALU_profile_holder_wall_thickness*4)/2, 26/2, tower_height+53])
         rotate([90, 0, 0])
         union() {
             difference() {
                 hull() {
                     translate([-608_bearing_outer_diameter/2-10/2, -(608_bearing_outer_diameter+10)/2-15, 0])
-                    cube([608_bearing_outer_diameter+10, 3, 26]);
+                    cube([ALU_profile_width+ALU_profile_holder_wall_thickness*4, 3, 26]);
                     cylinder(h=26, d=608_bearing_outer_diameter+10, $fn=100);
                 }
                 translate([0, 0, -5])
