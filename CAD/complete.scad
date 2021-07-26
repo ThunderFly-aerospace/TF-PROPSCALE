@@ -3,14 +3,12 @@ use <./src/lib/ALU_profile.scad>
 use <./src/888_3007.scad>
 use <./src/888_5002.scad>
 use <./src/888_5003.scad>
+use <./src/888_5004.scad>
 use <./src/888_5005.scad>
 use <./src/888_5006.scad>
-use <./src/888_5007.scad>
 use <./src/888_5008.scad>
-use <./src/888_5009.scad>
 use <./src/888_5010.scad>
 use <./src/888_5011.scad>
-use <./src/888_5012.scad>
 use <./src/888_5013.scad>
 use <./src/888_5014.scad>
 use <./src/888_1001.scad>
@@ -139,14 +137,7 @@ color([0, 1, 1])
 translate([front_tower_offset, 0, ALU_profile_width+0+35])
 rotate([0, 0, 0])
 color([0, 1, 1])
-//888_5007();
 888_5008();
-
-//// back plate of front triangle joint  
-//translate([front_tower_offset, 0, ALU_profile_width+0+35])
-//rotate([0, 0, 0])
-//color([0, 1, 1])
-//888_5009();
 
 // motor adapter    
 translate([front_tower_offset+ALU_profile_width/2+ALU_profile_holder_wall_thickness*2+20-2, 0, tower_height+ALU_profile_width+35])
@@ -187,18 +178,19 @@ rotate([0, 90, 180])
 tenzometer(mounting_part=false);
 
 // tower bridge ////////////////////////////////////////////////////////////////////
-translate([(front_tower_offset-back_tower_offset)/2-35, 0, tower_height+ALU_profile_width+608_bearing_outer_diameter])
+translate([(front_tower_offset-back_tower_offset-280)/2-5-back_tower_offset, 0, tower_height+ALU_profile_holder_wall_thickness*3+ALU_profile_width*2.5+53+608_bearing_outer_diameter])
 rotate([0, 90, 0])
-ALU_profile(height=70);
+ALU_profile(height=280);
 
-translate([(front_tower_offset-back_tower_offset)/2, 0, tower_height+54])
+translate([-back_tower_offset+(608_bearing_outer_diameter+10)/2-ALU_profile_holder_wall_thickness*2+1, -ALU_profile_width/2-ALU_profile_holder_wall_thickness, tower_height+ALU_profile_holder_wall_thickness+ALU_profile_width*2+53+608_bearing_outer_diameter])
+rotate([-90, 0, 90])
 color([0, 1, 1])
-888_5012();
+888_5004();
 
-translate([(front_tower_offset-back_tower_offset)/2, 0, tower_height+54])
-rotate([0, 0, 180])
+translate([front_tower_offset+(608_bearing_outer_diameter+10)/2-ALU_profile_holder_wall_thickness*2+1, -ALU_profile_width/2-ALU_profile_holder_wall_thickness, tower_height+ALU_profile_holder_wall_thickness+ALU_profile_width*2+53+608_bearing_outer_diameter])
+rotate([-90, 0, 90])
 color([0, 1, 1])
-888_5012();
+888_5004();
 
 // calibration device //////////////////////////////////////////////////////////////
 translate([-base_length/2, -ALU_profile_width/2, 0+tower_height+20])
