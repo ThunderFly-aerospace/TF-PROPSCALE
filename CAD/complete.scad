@@ -1,6 +1,7 @@
 include <./parameters.scad>
 use <./src/lib/ALU_profile.scad>
 use <./src/888_3007.scad>
+use <./src/888_5001.scad>
 use <./src/888_5002.scad>
 use <./src/888_5003.scad>
 use <./src/888_5004.scad>
@@ -24,17 +25,12 @@ module tenzometer(mounting_part=true) {
     color([0, 0, 1])
     cube([strain_gauge_length, strain_gauge_width, strain_gauge_width]);
     
-    if(mounting_part) {
-        translate([-7.5, ALU_profile_width/2+ALU_profile_holder_wall_thickness, -ALU_profile_holder_wall_thickness])
-        rotate([90, 0 ,-90])
+    if (mounting_part) {
+        translate([strain_gauge_length/2-(strain_gauge_screw_distance*1.75)/2, 0, 0])
+        rotate([0, 0 ,90])
         color([0, 1, 1])
-        888_5001();
+        888_5002();
     }
-    
-    translate([strain_gauge_length/2-(strain_gauge_screw_distance*1.75)/2, 0, 0])
-    rotate([0, 0 ,90])
-    color([0, 1, 1])
-    888_5002();
 }
 
 
@@ -59,24 +55,28 @@ translate([base_length/2+ALU_profile_width/2, -base_length/2, ALU_profile_width/
 rotate([0, 90, 90])
 ALU_profile(height=base_length);
 
+translate([-120, ALU_profile_width/2, ALU_profile_width/2])
+rotate([0, 90, 90])
+ALU_profile(height=205);
+
 // car attachment point
-translate([0, 24.8, 0])
-rotate([0, 0, 0])
+translate([30, -24.8, 0])
+rotate([0, 0, 180])
 color([0, 1, 1])
 888_3007();
 
 //box
-translate([-base_length/2, base_length/2-3, ALU_profile_width])
+translate([-120+ALU_profile_width/2, base_length/2-3, ALU_profile_width])
 rotate([0, 0, 0])
 color([0, 1, 1])
 888_5014_back();
 
-translate([-base_length/2+150, base_length/2-3, ALU_profile_width])
+translate([-120+ALU_profile_width/2+150, base_length/2-3, ALU_profile_width])
 rotate([0, 0, 0])
 color([0, 1, 1])
 888_5014_front();
 
-translate([-base_length/2-ALU_profile_width/2, base_length/2-3-electro_box_width-ALU_profile_width, ALU_profile_width+3])
+translate([-120-ALU_profile_width/2, base_length/2-3-electro_box_width-ALU_profile_width, ALU_profile_width+3])
 rotate([0, 0, 0])
 color([0, 1, 1])
 #cube([electro_box_length, electro_box_width, electro_box_height]);
@@ -105,12 +105,12 @@ color([0, 1, 1])
 
 // back pillar //////////////////////////////////////////////////////
 translate([-base_length/2-ALU_profile_width/2, 0, ALU_profile_width])
-ALU_profile(height=0+tower_height+20);
+ALU_profile(height=520);
 
-translate([-base_length/2+ALU_profile_holder_wall_thickness*2, -ALU_profile_width/2-ALU_profile_holder_wall_thickness, tower_height-strain_gauge_length/2-tower_drag_z_offset/2+2+0+ALU_profile_width*2+ALU_profile_holder_wall_thickness*2-strain_gauge_length/2+(strain_gauge_screw_distance*1.75)/2+M5_screw_diameter*2.5/2])
+translate([-base_length/2+ALU_profile_holder_wall_thickness*2, -ALU_profile_width/2-ALU_profile_holder_wall_thickness, tower_height+ALU_profile_width*1.5+54+608_bearing_outer_diameter-tower_drag_z_offset/2])
 rotate([180, 0, 90])
 color([0, 1, 1])
-888_5003_A();
+888_5001();
 
 
 // front tower ///////////////////////////////////////////////////////////////////
@@ -139,12 +139,6 @@ rotate([0, 0, 0])
 color([0, 1, 1])
 888_5008();
 
-// motor adapter    
-translate([front_tower_offset+ALU_profile_width/2+ALU_profile_holder_wall_thickness*2+20-2, 0, tower_height+ALU_profile_width+35])
-rotate([90, 0, 90])
-color([0, 1, 1])
-Motor_Adapter();
-
 
 // back tower ///////////////////////////////////////////////////////////////////
 translate([-back_tower_offset, base_width/2-ALU_profile_width, ALU_profile_width+0+35])
@@ -172,15 +166,15 @@ rotate([0, 0, 0])
 color([0, 1, 1])
 888_5008();
 
-// drag strain gauge attachment point
-translate([-ALU_profile_width/2-ALU_profile_holder_wall_thickness*2+strain_gauge_width+4-back_tower_offset, 0, tower_height-strain_gauge_length/2-tower_drag_z_offset/2+2+0+ALU_profile_width*2+ALU_profile_holder_wall_thickness*2])
-rotate([0, 90, 180])
-tenzometer(mounting_part=false);
-
 // tower bridge ////////////////////////////////////////////////////////////////////
-translate([(front_tower_offset-back_tower_offset-280)/2-5-back_tower_offset, 0, tower_height+ALU_profile_holder_wall_thickness*3+ALU_profile_width*2.5+53+608_bearing_outer_diameter])
+translate([-back_tower_offset-ALU_profile_width*1.5-ALU_profile_holder_wall_thickness*2, 0, tower_height+ALU_profile_holder_wall_thickness*3+ALU_profile_width*2.5+53+608_bearing_outer_diameter])
 rotate([0, 90, 0])
-ALU_profile(height=280);
+ALU_profile(height=400);
+
+translate([-back_tower_offset+(608_bearing_outer_diameter+10)/2-ALU_profile_width*2-ALU_profile_holder_wall_thickness*2-5-2, -ALU_profile_width/2-ALU_profile_holder_wall_thickness, tower_height+ALU_profile_holder_wall_thickness*3+ALU_profile_width*2+53+608_bearing_outer_diameter])
+rotate([0, 0, 90])
+color([0, 1, 1])
+888_5001();
 
 translate([-back_tower_offset+(608_bearing_outer_diameter+10)/2-ALU_profile_holder_wall_thickness*2+1, -ALU_profile_width/2-ALU_profile_holder_wall_thickness, tower_height+ALU_profile_holder_wall_thickness+ALU_profile_width*2+53+608_bearing_outer_diameter])
 rotate([-90, 0, 90])
@@ -191,6 +185,11 @@ translate([front_tower_offset+(608_bearing_outer_diameter+10)/2-ALU_profile_hold
 rotate([-90, 0, 90])
 color([0, 1, 1])
 888_5004();
+
+// drag strain gauge attachment point
+translate([-back_tower_offset+(608_bearing_outer_diameter+10)/2-ALU_profile_width*2-ALU_profile_holder_wall_thickness*2-10-2, 0, tower_height+ALU_profile_holder_wall_thickness+ALU_profile_width*2+53+608_bearing_outer_diameter-tower_drag_z_offset/2])
+rotate([0, 90, 180])
+tenzometer(mounting_part=false);
 
 // calibration device //////////////////////////////////////////////////////////////
 translate([-base_length/2, -ALU_profile_width/2, 0+tower_height+20])
