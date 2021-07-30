@@ -1,12 +1,17 @@
 include <../parameters.scad>
 use <./lib/ALU_profile_holder_top.scad>
+use <./lib/ALU_profile_holder_side.scad>
 
 
-module 888_5001() {
+module 888_5001(rotated=true) {
     difference() {
         union() {
             translate([0, -ALU_profile_width-ALU_profile_holder_wall_thickness*2, 0])
-            ALU_profile_holder_top(ALU_profile_width);
+            if (rotated) {
+                ALU_profile_holder_top(ALU_profile_width);
+            } else {
+                ALU_profile_holder_side(ALU_profile_width);
+            }
             
             hull() {
                 translate([ALU_profile_width/2-strain_gauge_width/2+ALU_profile_holder_wall_thickness, 0, 0])

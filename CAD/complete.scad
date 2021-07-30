@@ -110,7 +110,7 @@ ALU_profile(height=520);
 translate([-base_length/2+ALU_profile_holder_wall_thickness*2, -ALU_profile_width/2-ALU_profile_holder_wall_thickness, tower_height+ALU_profile_width*1.5+54+608_bearing_outer_diameter-tower_drag_z_offset/2])
 rotate([180, 0, 90])
 color([0, 1, 1])
-888_5001();
+888_5001(false);
 
 
 // front tower ///////////////////////////////////////////////////////////////////
