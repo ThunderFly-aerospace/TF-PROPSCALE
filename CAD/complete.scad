@@ -8,6 +8,7 @@ use <./src/888_5004.scad>
 use <./src/888_5005.scad>
 use <./src/888_5006.scad>
 use <./src/888_5008.scad>
+use <./src/888_5009.scad>
 use <./src/888_5010.scad>
 use <./src/888_5011.scad>
 use <./src/888_5013.scad>
@@ -55,10 +56,6 @@ translate([base_length/2+ALU_profile_width/2, -base_length/2, ALU_profile_width/
 rotate([0, 90, 90])
 ALU_profile(height=base_length);
 
-translate([-120, ALU_profile_width/2, ALU_profile_width/2])
-rotate([0, 90, 90])
-ALU_profile(height=205);
-
 // car attachment point
 translate([30, -24.8, 0])
 rotate([0, 0, 180])
@@ -66,18 +63,18 @@ color([0, 1, 1])
 888_3007();
 
 //box
-translate([-120+ALU_profile_width/2, base_length/2-3, ALU_profile_width])
-rotate([0, 0, 0])
+translate([base_length/2, -ALU_profile_width/2, ALU_profile_width])
+rotate([0, 0, 180])
 color([0, 1, 1])
 888_5014_back();
 
-translate([-120+ALU_profile_width/2+150, base_length/2-3, ALU_profile_width])
-rotate([0, 0, 0])
+translate([base_length/2-150, -ALU_profile_width/2, ALU_profile_width])
+rotate([0, 0, 180])
 color([0, 1, 1])
 888_5014_front();
 
-translate([-120-ALU_profile_width/2, base_length/2-3-electro_box_width-ALU_profile_width, ALU_profile_width+3])
-rotate([0, 0, 0])
+translate([base_length/2+ALU_profile_width/2, -ALU_profile_width/2+electro_box_width+ALU_profile_width, ALU_profile_width+3])
+rotate([0, 0, 180])
 color([0, 1, 1])
 #cube([electro_box_length, electro_box_width, electro_box_height]);
 
@@ -190,6 +187,16 @@ color([0, 1, 1])
 translate([-back_tower_offset+(608_bearing_outer_diameter+10)/2-ALU_profile_width*2-ALU_profile_holder_wall_thickness*2-10-2, 0, tower_height+ALU_profile_holder_wall_thickness+ALU_profile_width*2+53+608_bearing_outer_diameter-tower_drag_z_offset/2])
 rotate([0, 90, 180])
 tenzometer(mounting_part=false);
+
+translate([200-ALU_profile_holder_wall_thickness*3, ALU_profile_width/2+ALU_profile_holder_wall_thickness, tower_height+ALU_profile_holder_wall_thickness*3+ALU_profile_width*2+53+608_bearing_outer_diameter])
+rotate([0, 0, -90])
+color([0, 1, 1])
+888_5009();
+
+translate([200-ALU_profile_holder_wall_thickness*3+10, 0, tower_height+ALU_profile_holder_wall_thickness*3+ALU_profile_width*3+53+608_bearing_outer_diameter+0.64])
+rotate([90, 0, 90])
+color([0, 1, 1])
+Motor_Adapter();
 
 // calibration device //////////////////////////////////////////////////////////////
 translate([-base_length/2, -ALU_profile_width/2, 0+tower_height+20])

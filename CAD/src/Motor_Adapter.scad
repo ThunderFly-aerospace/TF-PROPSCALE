@@ -14,7 +14,8 @@ thickness = motor_holder_thickness; //sirka sten - dost random
 motor_diameter = 35.2;
 side_thickness = 3;
 
-motor_y_shift = ALU_profile_width/2+ALU_profile_holder_wall_thickness+M4_screw_diameter+M4_nut_diameter-(motor_diameter+20)/2;
+//motor_y_shift = ALU_profile_width/2+ALU_profile_holder_wall_thickness+M4_screw_diameter+M4_nut_diameter-(motor_diameter+20)/2;
+motor_y_shift = 0;
 
 module Motor_Model() {
     // nahled motoru
@@ -37,14 +38,14 @@ module Motor_Adapter(){
             rotor_joint_plate(thickness);
         }
         
-        rotor_joint_holes(2,10, 55);
+        rotor_joint_holes(2,10, 35);
         
         union() {
             translate([-(motor_diameter+10)/2, 0, 5])
             cube([motor_diameter+10, 100, 50+10-thickness]);
             
-            translate([0, 0, thickness])
-            cylinder(d=motor_diameter+10, h=50+10-thickness);
+            translate([0, -motor_y_shift, -1])
+            cylinder(d=motor_diameter+10, h=50+10+1);
         }
             
         
