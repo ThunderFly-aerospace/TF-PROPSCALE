@@ -11,7 +11,8 @@ The computer which should display the measured data needs to have [TFROSTOOLS](h
     sudo apt install python3-colcon-common-extensions
     git clone git@github.com:ThunderFly-aerospace/TFROSTOOLS.git
     cd TFROSTOOLS/
-    ./install.sh
+    ./install.
+    source install/setup.bash
 
 Then the data should be displayed in the [PlotJuggler](https://github.com/facontidavide/PlotJuggler) on the remote computer.
 
