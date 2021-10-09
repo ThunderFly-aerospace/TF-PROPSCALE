@@ -28072,16 +28072,6 @@
      <v3>981</v3>
     </triangle>
     <triangle>
-     <v1>1000</v1>
-     <v2>1406</v2>
-     <v3>1403</v3>
-    </triangle>
-    <triangle>
-     <v1>1001</v1>
-     <v2>1000</v2>
-     <v3>1403</v3>
-    </triangle>
-    <triangle>
      <v1>1403</v1>
      <v2>1419</v2>
      <v3>1002</v3>
@@ -28090,6 +28080,16 @@
      <v1>1001</v1>
      <v2>1403</v2>
      <v3>1002</v3>
+    </triangle>
+    <triangle>
+     <v1>1000</v1>
+     <v2>1406</v2>
+     <v3>1403</v3>
+    </triangle>
+    <triangle>
+     <v1>1001</v1>
+     <v2>1000</v2>
+     <v3>1403</v3>
     </triangle>
     <triangle>
      <v1>1016</v1>
