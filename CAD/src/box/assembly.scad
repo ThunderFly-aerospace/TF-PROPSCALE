@@ -23,7 +23,7 @@ UNIBOX03A_D01();
 
 
 
-posun_modulu_der_x=-6;
+posun_modulu_der_x=-5;
 #rotate(a=[-90,0,0])
 translate([posun_modulu_der_x*roztec_der-roztec_der*(pocet_der_osa_x-1)/2,0,-rozmer_y/2+vzdalenost_AL])
 C1(sila*2,rozmer_y-vzdalenost_AL);
@@ -43,7 +43,7 @@ USBI2C01A(2*sila,roztec_der,vzdalenost_AL);
     
      }  
 
-translate([15, 10, 0]) linear_extrude(sila+0.5) text("ThunderFly", size=8);
-translate([-56, -15, 0]) linear_extrude(sila+0.5) text("TF-MOTORSCALE", size=5);
+translate([18, 10, 0]) linear_extrude(sila+0.5) text("ThunderFly", size=8);
+translate([-46, -15, 0]) linear_extrude(sila+0.5) text("TF-MOTORSCALE", size=5);
      
     
