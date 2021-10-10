@@ -1,0 +1,6 @@
+front_cover.scad: \
+	../src/box/assembly.scad \
+	../src/box/configuration.scad \
+	../src/box/src/UNIBOX03A_D01.scad \
+	../src/box/src/otvory.scad \
+	../src/box/src/otvory_conf.scad \
