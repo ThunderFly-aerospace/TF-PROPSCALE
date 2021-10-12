@@ -40,3 +40,11 @@ CAN převodník se přípojí příkazem:
 Následně se musí spustit ROS nod:
 
     ros2 run tf_tools uavcan_motor_driver
+    
+# Další nódy
+
+```
+ros2 run tf_tools gpsd
+ros2 run tf_tools tfslot
+ros2 run tf_tools uavcan_motor_driver
+```
