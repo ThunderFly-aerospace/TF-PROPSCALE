@@ -815,11 +815,6 @@
      <z>4</z>
     </coordinates></vertex>
     <vertex><coordinates>
-     <x>-2.13988</x>
-     <y>-4.30471</y>
-     <z>3</z>
-    </coordinates></vertex>
-    <vertex><coordinates>
      <x>-2.25</x>
      <y>-5</y>
      <z>3</z>
@@ -827,6 +822,11 @@
     <vertex><coordinates>
      <x>-2.13988</x>
      <y>-5.69529</y>
+     <z>3</z>
+    </coordinates></vertex>
+    <vertex><coordinates>
+     <x>-2.13988</x>
+     <y>-4.30471</y>
      <z>3</z>
     </coordinates></vertex>
     <vertex><coordinates>
@@ -3727,34 +3727,34 @@
      <v3>158</v3>
     </triangle>
     <triangle>
-     <v1>26</v1>
-     <v2>162</v2>
-     <v3>163</v3>
-    </triangle>
-    <triangle>
-     <v1>6</v1>
-     <v2>26</v2>
-     <v3>163</v3>
-    </triangle>
-    <triangle>
-     <v1>163</v1>
-     <v2>164</v2>
-     <v3>7</v3>
-    </triangle>
-    <triangle>
-     <v1>6</v1>
+     <v1>162</v1>
      <v2>163</v2>
      <v3>7</v3>
     </triangle>
     <triangle>
+     <v1>6</v1>
+     <v2>162</v2>
+     <v3>7</v3>
+    </triangle>
+    <triangle>
+     <v1>26</v1>
+     <v2>164</v2>
+     <v3>162</v3>
+    </triangle>
+    <triangle>
+     <v1>6</v1>
+     <v2>26</v2>
+     <v3>162</v3>
+    </triangle>
+    <triangle>
      <v1>25</v1>
      <v2>165</v2>
-     <v3>162</v3>
+     <v3>164</v3>
     </triangle>
     <triangle>
      <v1>26</v1>
      <v2>25</v2>
-     <v3>162</v3>
+     <v3>164</v3>
     </triangle>
     <triangle>
      <v1>19</v1>
@@ -3917,13 +3917,13 @@
      <v3>8</v3>
     </triangle>
     <triangle>
-     <v1>164</v1>
+     <v1>163</v1>
      <v2>181</v2>
      <v3>8</v3>
     </triangle>
     <triangle>
      <v1>7</v1>
-     <v2>164</v2>
+     <v2>163</v2>
      <v3>8</v3>
     </triangle>
     <triangle>
@@ -5078,12 +5078,12 @@
     </triangle>
     <triangle>
      <v1>121</v1>
-     <v2>163</v2>
+     <v2>162</v2>
      <v3>158</v3>
     </triangle>
     <triangle>
-     <v1>163</v1>
-     <v2>162</v2>
+     <v1>162</v1>
+     <v2>164</v2>
      <v3>158</v3>
     </triangle>
     <triangle>
@@ -5092,7 +5092,7 @@
      <v3>121</v3>
     </triangle>
     <triangle>
-     <v1>162</v1>
+     <v1>164</v1>
      <v2>165</v2>
      <v3>158</v3>
     </triangle>
@@ -5178,13 +5178,13 @@
     </triangle>
     <triangle>
      <v1>121</v1>
-     <v2>164</v2>
-     <v3>163</v3>
+     <v2>163</v2>
+     <v3>162</v3>
     </triangle>
     <triangle>
      <v1>121</v1>
      <v2>181</v2>
-     <v3>164</v3>
+     <v3>163</v3>
     </triangle>
     <triangle>
      <v1>183</v1>

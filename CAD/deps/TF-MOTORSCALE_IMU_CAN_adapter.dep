@@ -1,0 +1,3 @@
+IMU_CAN_adapter.scad: \
+	../parameters.scad \
+	../src/IMU_CAN_adapter.scad \
