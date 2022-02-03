@@ -32,20 +32,22 @@ module Motor_Adapter(){
     difference(){
         hull() {
             translate([0, -motor_y_shift, 0])
-            cylinder(d=motor_diameter+20, h=50+10+5);
+                scale([1, 0.6, 1])
+                    cylinder(d=motor_diameter+20, h=50+10+5);
             
             translate([0, 0, thickness/2])
             rotor_joint_plate(thickness);
         }
         
-        rotor_joint_holes(2,10, 35);
+        rotor_joint_holes(2,10, 55);
         
         union() {
-            translate([-(motor_diameter+10)/2, 0, 5])
-            cube([motor_diameter+10, 100, 50+10-thickness]);
+            translate([-(motor_diameter+8)/2, -50, 5])
+            cube([motor_diameter+8, 100, 50+10-thickness]);
             
             translate([0, -motor_y_shift, -1])
-            cylinder(d=motor_diameter+10, h=50+10+1);
+            cylinder(d=motor_diameter+10, h=6-0.2);
+            translate([0, 0, 6]) cylinder(d=motor_diameter+10, h=50);
         }
             
         
@@ -55,19 +57,22 @@ module Motor_Adapter(){
             cylinder(d=13, h=20, $fn=100);
     
             for(x = [1,2,3,4])
-                rotate([0, 0, 90*x+45])
+                rotate([0, 0, 90*x])
                 translate([0, 25/2, 0])
                 cylinder(d = M3_screw_diameter, h = 20, $fn=20);
     
             for(x = [1,2,3,4])
-                rotate([0, 0, 90*x])
+                rotate([0, 0, 90*x+45])
                 translate([0, 25/2, 0])
                 hull(){
                     translate([2, 0, 0])
-                    cylinder(d = M5_screw_diameter, h = 20, $fn=20);
+                    cylinder(d = M6_screw_diameter, h = 20, $fn=20);
+                    
+                    translate([0, 0, 0])
+                    cylinder(d = 8, h = 20, $fn=20);
                     
                     translate([-2, 0, 0])
-                    cylinder(d = M5_screw_diameter, h = 20, $fn=20);
+                    cylinder(d = M6_screw_diameter, h = 20, $fn=20);
                 }
         }
     }
