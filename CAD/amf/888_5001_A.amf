@@ -1507,7 +1507,7 @@
     <vertex><coordinates>
      <x>15.6346</x>
      <y>-0.0100007</y>
-     <z>5.8498</z>
+     <z>4.1502</z>
     </coordinates></vertex>
     <vertex><coordinates>
      <x>15.5</x>
@@ -1517,7 +1517,7 @@
     <vertex><coordinates>
      <x>15.6346</x>
      <y>-0.0100007</y>
-     <z>4.1502</z>
+     <z>5.8498</z>
     </coordinates></vertex>
     <vertex><coordinates>
      <x>16.0252</x>
@@ -4407,24 +4407,24 @@
      <v3>138</v3>
     </triangle>
     <triangle>
-     <v1>221</v1>
-     <v2>245</v2>
-     <v3>300</v3>
-    </triangle>
-    <triangle>
-     <v1>301</v1>
-     <v2>221</v2>
-     <v3>300</v3>
-    </triangle>
-    <triangle>
-     <v1>302</v1>
+     <v1>300</v1>
      <v2>225</v2>
      <v3>221</v3>
     </triangle>
     <triangle>
      <v1>301</v1>
-     <v2>302</v2>
+     <v2>300</v2>
      <v3>221</v3>
+    </triangle>
+    <triangle>
+     <v1>221</v1>
+     <v2>245</v2>
+     <v3>302</v3>
+    </triangle>
+    <triangle>
+     <v1>301</v1>
+     <v2>221</v2>
+     <v3>302</v3>
     </triangle>
     <triangle>
      <v1>245</v1>
@@ -4432,7 +4432,7 @@
      <v3>303</v3>
     </triangle>
     <triangle>
-     <v1>300</v1>
+     <v1>302</v1>
      <v2>245</v2>
      <v3>303</v3>
     </triangle>
@@ -4602,7 +4602,7 @@
      <v3>225</v3>
     </triangle>
     <triangle>
-     <v1>302</v1>
+     <v1>300</v1>
      <v2>319</v2>
      <v3>225</v3>
     </triangle>
@@ -4894,7 +4894,7 @@
     <triangle>
      <v1>277</v1>
      <v2>260</v2>
-     <v3>300</v3>
+     <v3>302</v3>
     </triangle>
     <triangle>
      <v1>277</v1>
@@ -4903,7 +4903,7 @@
     </triangle>
     <triangle>
      <v1>277</v1>
-     <v2>300</v2>
+     <v2>302</v2>
      <v3>303</v3>
     </triangle>
     <triangle>
@@ -4928,7 +4928,7 @@
     </triangle>
     <triangle>
      <v1>301</v1>
-     <v2>300</v2>
+     <v2>302</v2>
      <v3>260</v3>
     </triangle>
     <triangle>
@@ -4943,7 +4943,7 @@
     </triangle>
     <triangle>
      <v1>319</v1>
-     <v2>302</v2>
+     <v2>300</v2>
      <v3>260</v3>
     </triangle>
     <triangle>
@@ -5002,7 +5002,7 @@
      <v3>273</v3>
     </triangle>
     <triangle>
-     <v1>302</v1>
+     <v1>300</v1>
      <v2>301</v2>
      <v3>260</v3>
     </triangle>
