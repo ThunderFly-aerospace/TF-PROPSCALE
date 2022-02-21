@@ -16,6 +16,10 @@ right_conn_width = 16;
 right_conn_height = 9.5;
 right_conn_bot_gap = 7.5;
 
+CAN_conn_width = 7.5;
+CAN_conn_height = 5;
+CAN_conn_bot_gap = 9;
+
 module IMU_CAN_adapter() {
 	difference() {
 		// whole body
@@ -63,6 +67,10 @@ module IMU_CAN_adapter() {
 		// right connector hole
 		translate([-3+IMU_length/2-right_conn_width/2, -5+IMU_width, right_conn_height])
 		cube([right_conn_width, 10, right_conn_height]);
+
+		// right connector hole
+		translate([-7, -3+IMU_width/2-CAN_conn_width/2, CAN_conn_bot_gap])
+		cube([10, CAN_conn_width, CAN_conn_height]);
 	}
 }
 
