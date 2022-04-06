@@ -7047,16 +7047,6 @@
      <v3>393</v3>
     </triangle>
     <triangle>
-     <v1>431</v1>
-     <v2>451</v2>
-     <v3>410</v3>
-    </triangle>
-    <triangle>
-     <v1>410</v1>
-     <v2>451</v2>
-     <v3>450</v3>
-    </triangle>
-    <triangle>
      <v1>411</v1>
      <v2>410</v2>
      <v3>470</v3>
@@ -7064,6 +7054,16 @@
     <triangle>
      <v1>470</v1>
      <v2>410</v2>
+     <v3>450</v3>
+    </triangle>
+    <triangle>
+     <v1>431</v1>
+     <v2>451</v2>
+     <v3>410</v3>
+    </triangle>
+    <triangle>
+     <v1>410</v1>
+     <v2>451</v2>
      <v3>450</v3>
     </triangle>
     <triangle>
