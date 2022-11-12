@@ -1,4 +1,6 @@
-# TF-MOTORSCALE
+# TF-PROPSCALE
+
+(originally named TF-MOTORSCALE) 
 
 Test bench for measuring parameters of propulsion system (propeller, motor, regulator) of unmanned drones
 
