@@ -1,18 +1,15 @@
-# TF-PROPSCALE
+# TF-PROPSCALE - propulsion system test bench
 
-(originally named TF-MOTORSCALE) 
+*Formerly known as TF-MOTORSCALE* 
 
-Test bench for measuring parameters of propulsion system (propeller, motor, regulator) of unmanned drones
+Test bench for measuring parameters and verification of propulsion system (propeller, motor, regulator) of unmanned drones especially [TF-G2 autogyro](https://github.com/ThunderFly-aerospace/TF-G2).
 
-![TF-MOTORSCALE01A](doc/img/TF-MOTORSCALE01A.JPG)
-
-
+![TF-PROPSCALE01A](doc/img/TF-MOTORSCALE01A.JPG)
 
 
 ## Start measuring scripts
 
     sudo systemctl restart onboot
-
 
 ## Remote display
 
@@ -28,22 +25,20 @@ Then the data should be displayed in the [PlotJuggler](https://github.com/facont
 
     ros2 run plotjuggler plotjuggler
 
+![TF-PROPSCALE01A](doc/img/measured_data_display.png)
 
-![TF-MOTORSCALE01A](doc/img/measured_data_display.png)
 
+# Readout of parameters from UAVCAN ESC
 
-# Vyčítání parametrů z UAVCAN regulátoru
-
-CAN převodník se přípojí příkazem:
+CAN translator should be connected by following command:
 
     ./create_socket_can.sh
 
-
-Následně se musí spustit ROS nod:
+Then [ROS node](http://wiki.ros.org/Nodes) should be run by:
 
     ros2 run tf_tools uavcan_motor_driver
     
-# Další nódy
+# Additional ROS nodes
 
 ```
 ros2 run tf_tools gpsd
